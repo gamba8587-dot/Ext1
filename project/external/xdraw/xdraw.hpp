@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #define NOMINMAX
 #include <windows.h>
 #include <wrl/client.h>
@@ -186,17 +186,23 @@ namespace xdraw {
 	[[nodiscard]] float framerate( );
 	[[nodiscard]] ID3D11Device* device( );
 }
+// Drop-in replacement for namespace tokens in:
+// project/external/xdraw/xdraw.hpp (lines 189-203)
+
 namespace tokens {
-	inline xdraw::color col_accent{ 159, 139, 255, 255 };
-	inline xdraw::color col_dark{ 17, 16, 23, 255 };
-	inline xdraw::color col_text{ 244, 242, 250, 255 };
-	inline xdraw::color col_text_dim{ 151, 149, 165, 255 };
-	inline xdraw::color col_card{ 29, 28, 37, 255 };
-	inline xdraw::color col_elevated{ 20, 19, 27, 255 };
-	constexpr auto sidebar_w{ 150.0f };
-	constexpr auto tab_icon_size{ 28.0f };
-	constexpr auto subtab_bar_h{ 42.0f };
-	constexpr auto gap{ 10.0f };
-	constexpr auto card_rounding{ 7.0f };
-	constexpr auto btn_rounding{ 6.0f };
+inline xdraw::color col_accent{ 244, 63, 94, 255 };
+inline xdraw::color col_accent_dim{ 190, 18, 60, 255 };
+inline xdraw::color col_dark{ 11, 11, 14, 255 };
+inline xdraw::color col_text{ 248, 250, 252, 255 };
+inline xdraw::color col_text_dim{ 148, 163, 184, 255 };
+inline xdraw::color col_card{ 23, 23, 30, 255 };
+inline xdraw::color col_elevated{ 16, 16, 21, 255 };
+
+constexpr auto sidebar_w{ 162.0f };
+constexpr auto tab_icon_size{ 28.0f };
+constexpr auto subtab_bar_h{ 44.0f };
+constexpr auto gap{ 10.0f };
+constexpr auto card_rounding{ 7.0f };
+constexpr auto btn_rounding{ 5.0f };
 }
+
